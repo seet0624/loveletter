@@ -1926,7 +1926,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Parisienne&family=Ma+Shan+Zheng&family=LXGW+WenKai+TC:wght@300;400&family=Noto+Serif+SC:wght@200;300;400&display=swap" rel="stylesheet" />
 <style>
-  html, body { margin: 0; padding: 0; background: #241019; }
+  html, body { margin: 0; padding: 0; background: #241019; -webkit-text-size-adjust: 100%; }
   a { color: #b4576b; text-decoration: none; }
   a:hover { color: #8c3a4c; }
   @keyframes petalfall {
@@ -1998,7 +1998,7 @@
 </style>
 </helmet>
 
-<div style="position: relative; min-height: 100vh; width: 100%; overflow: hidden; background: radial-gradient(120% 90% at 50% 12%, #4a2130 0%, #2c1220 46%, #1a0a12 100%); font-family: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif; color: #f6e7e2;">
+<div style="position: relative; min-height: 100dvh; width: 100%; overflow: hidden; background: radial-gradient(120% 90% at 50% 12%, #4a2130 0%, #2c1220 46%, #1a0a12 100%); font-family: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif; color: #f6e7e2;">
 
   <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(60% 40% at 50% 45%, rgba(255, 214, 196, 0.16), rgba(0,0,0,0) 70%);"></div>
 
@@ -2015,15 +2015,15 @@
     </div>
   </sc-if>
 
-  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 64px; padding: 40px 32px; transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ envOpacity }}; transform: scale({{ envScale }}); pointer-events: {{ envPointer }};">
+  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 64px; padding: 4vh clamp(16px, 5vw, 32px); transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ envOpacity }}; transform: scale({{ envScale }}); pointer-events: {{ envPointer }};">
 
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; transition: opacity 600ms ease; opacity: {{ headerOpacity }};">
       <div style="font-family: 'Parisienne', cursive; font-size: 23px; line-height: 1.8; padding-bottom: 4px; color: #e0a7a4; letter-spacing: 0.04em;">for you, always</div>
-      <div style="font-family: 'LXGW WenKai TC', 'Noto Serif SC', serif; font-size: 44px; line-height: 1.2; letter-spacing: 0.08em; color: #f7d7d2;">泫汐 宝贝</div>
+      <div style="font-family: 'LXGW WenKai TC', 'Noto Serif SC', serif; font-size: clamp(30px, 8.5vw, 44px); line-height: 1.2; letter-spacing: 0.08em; color: #f7d7d2;">泫汐 宝贝</div>
       <div style="width: 96px; height: 1px; background: linear-gradient(90deg, rgba(242,201,196,0), #f2c9c4, rgba(242,201,196,0));"></div>
     </div>
 
-    <div onClick="{{ open }}" style="position: relative; width: 404px; max-width: 88vw; height: 274px; cursor: pointer; animation: breathe 6s ease-in-out infinite; filter: drop-shadow(0 34px 48px rgba(12, 4, 8, 0.55)); perspective: 1400px;">
+    <div onClick="{{ open }}" style="position: relative; width: min(404px, 88vw); height: min(274px, 62vw); cursor: pointer; animation: breathe 6s ease-in-out infinite; filter: drop-shadow(0 34px 48px rgba(12, 4, 8, 0.55)); perspective: 1400px;">
 
       <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 78%; background: linear-gradient(180deg, #f7e6e0 0%, #efd7d1 100%); border-radius: 3px;"></div>
 
@@ -2073,20 +2073,20 @@
     </div>
   </div>
 
-  <div style="position: absolute; inset: 0; display: flex; align-items: flex-start; justify-content: center; padding: 6vh 24px 12vh; overflow-y: auto; transition: opacity 800ms ease 320ms, transform 900ms cubic-bezier(0.22, 1, 0.36, 1) 320ms; opacity: {{ letterOpacity }}; transform: translateY({{ letterY }}) scale({{ letterScale }}); pointer-events: {{ letterPointer }};">
+  <div style="position: absolute; inset: 0; display: flex; align-items: flex-start; justify-content: center; padding: 5vh clamp(10px, 3.5vw, 24px) 16vh; overflow-y: auto; -webkit-overflow-scrolling: touch; transition: opacity 800ms ease 320ms, transform 900ms cubic-bezier(0.22, 1, 0.36, 1) 320ms; opacity: {{ letterOpacity }}; transform: translateY({{ letterY }}) scale({{ letterScale }}); pointer-events: {{ letterPointer }};">
 
-    <div style="position: relative; width: 100%; max-width: 680px; padding: 68px 62px 56px; background: linear-gradient(180deg, #fffdf7 0%, #fbf3e6 100%); border-radius: 2px; box-shadow: 0 40px 90px rgba(10, 3, 7, 0.6); color: #3d2028;">
+    <div style="position: relative; width: 100%; max-width: 680px; padding: clamp(32px, 8vw, 68px) clamp(20px, 5.6vw, 62px) clamp(28px, 7vw, 56px); background: linear-gradient(180deg, #fffdf7 0%, #fbf3e6 100%); border-radius: 2px; box-shadow: 0 40px 90px rgba(10, 3, 7, 0.6); color: #3d2028;">
 
       <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(90% 60% at 20% 0%, rgba(255, 236, 214, 0.7), rgba(255,255,255,0) 60%);"></div>
 
       <div style="display: flex; flex-direction: column; gap: 30px;">
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <div style="font-size: 12px; letter-spacing: 0.42em; color: #a9737c;">藏 了 很 久 的 一 封 信</div>
-          <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: 54px; line-height: 1.3; letter-spacing: 0.04em; color: #7e1c30; animation: writein 1600ms cubic-bezier(0.4, 0, 0.2, 1) 300ms both;">泫汐 宝贝，</div>
+          <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: clamp(32px, 9vw, 54px); line-height: 1.3; letter-spacing: 0.04em; color: #7e1c30; animation: writein 1600ms cubic-bezier(0.4, 0, 0.2, 1) 300ms both;">泫汐 宝贝，</div>
           <div style="width: 168px; height: 2px; background: linear-gradient(90deg, #c0798a, rgba(192, 121, 138, 0)); transform-origin: left center; animation: inkdraw 900ms ease-out 1700ms both;"></div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 22px; font-size: 19px; line-height: 2.05; font-weight: 300; letter-spacing: 0.02em; text-wrap: pretty;">
+        <div style="display: flex; flex-direction: column; gap: 22px; font-size: clamp(16px, 4.3vw, 19px); line-height: 2; font-weight: 300; letter-spacing: 0.02em; text-wrap: pretty;">
           <p style="margin: 0; font-size: 22px; color: #7e1c30; transition: opacity 1000ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ o1 }}; transform: translateY({{ y1 }});">七夕快乐 ❤️</p>
 
           <p style="margin: 0; transition: opacity 1000ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ o2 }}; transform: translateY({{ y2 }});">其实最近我也感觉到，我们好像有点不太一样了，聊天少了，也没有以前那么自然。</p>
@@ -2111,7 +2111,7 @@
           <p style="margin: 0; transition: opacity 1000ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ o6 }}; transform: translateY({{ y6 }});">只是想告诉你，</p>
 
           <div style="position: relative; transition: opacity 1000ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1); opacity: {{ o7 }}; transform: translateY({{ y7 }});">
-            <p style="margin: 0; font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: 40px; line-height: 1.5; letter-spacing: 0.04em; color: #7e1c30;">我还是<span onPointerDown="{{ pressStart }}" onPointerUp="{{ pressEnd }}" onPointerLeave="{{ pressEnd }}" onContextMenu="{{ noMenu }}" style="position: relative; cursor: pointer; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; background: linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(222, 150, 160, 0.45) 62%); transition: transform 400ms ease; transform: scale({{ loveScale }}); display: inline-block;">爱</span>你的。</p>
+            <p style="margin: 0; font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: clamp(27px, 7.8vw, 40px); line-height: 1.5; letter-spacing: 0.04em; color: #7e1c30;">我还是<span onPointerDown="{{ pressStart }}" onPointerUp="{{ pressEnd }}" onPointerLeave="{{ pressEnd }}" onContextMenu="{{ noMenu }}" style="position: relative; cursor: pointer; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; background: linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(222, 150, 160, 0.45) 62%); transition: transform 400ms ease; transform: scale({{ loveScale }}); display: inline-block;">爱</span>你的。</p>
             <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; overflow: visible;">
               <sc-for list="{{ hearts }}" as="h" hint-placeholder-count="0">
                 <div style="position: absolute; left: {{ h.left }}; top: 8px; font-size: {{ h.size }}; color: #c2445a; animation: heartfloat 2200ms ease-out both; animation-delay: {{ h.delay }}; --hx: {{ h.drift }};">❤</div>
@@ -2137,7 +2137,7 @@
         <div style="display: flex; flex-direction: column; gap: 8px; transition: opacity 800ms ease; opacity: {{ endOpacity }};">
           <div style="font-size: 15px; color: #8a5a63; letter-spacing: 0.1em;">永远是你的</div>
           <div style="overflow: hidden; animation: writein 2200ms cubic-bezier(0.35, 0, 0.25, 1) both; animation-play-state: {{ signPlay }};">
-            <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: 44px; line-height: 1.4; letter-spacing: 0.04em; color: #7e1c30; white-space: nowrap;">爱你的我</div>
+            <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: clamp(30px, 8.5vw, 44px); line-height: 1.4; letter-spacing: 0.04em; color: #7e1c30; white-space: nowrap;">爱你的我</div>
           </div>
           <div style="width: 150px; height: 2px; background: linear-gradient(90deg, #7e1c30, rgba(126, 28, 48, 0)); transform-origin: left center; animation: inkdraw 1100ms ease-out 2100ms both; animation-play-state: {{ signPlay }};"></div>
         </div>
@@ -2150,8 +2150,8 @@
           </div>
           <div style="text-align: center; font-size: 15px; line-height: 1.9; color: #7e1c30; transition: opacity 600ms ease, max-height 600ms ease; overflow: hidden; opacity: {{ seenOpacity }}; max-height: {{ seenHeight }};">你看到了，就够了。❤️</div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 18px; padding-top: 26px; border-top: 1px solid rgba(169, 115, 124, 0.28);">
-            <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: 26px; letter-spacing: 0.04em; color: #7e1c30; text-align: center;">还有一件事，我一定要跟你说</div>
-            <div onClick="{{ showInvite }}" style="width: 100%; box-sizing: border-box; padding: 22px 28px; border-radius: 4px; cursor: pointer; text-align: center; font-family: 'LXGW WenKai TC', serif; font-size: 22px; letter-spacing: 0.14em; color: #fff4ef; background: linear-gradient(180deg, #a02b43 0%, #7e1c30 100%); box-shadow: 0 18px 38px rgba(126, 28, 48, 0.42); animation: breathe 2.4s ease-in-out infinite; transition: background 300ms ease;" style-hover="background: linear-gradient(180deg, #8c2038, #641423);">按这里 · 下一页 →</div>
+            <div style="font-family: 'Ma Shan Zheng', 'LXGW WenKai TC', serif; font-size: clamp(19px, 5.4vw, 26px); letter-spacing: 0.04em; color: #7e1c30; text-align: center;">还有一件事，我一定要跟你说</div>
+            <div onClick="{{ showInvite }}" style="width: 100%; box-sizing: border-box; padding: clamp(18px, 4.6vw, 22px) 18px; border-radius: 4px; cursor: pointer; text-align: center; font-family: 'LXGW WenKai TC', serif; font-size: clamp(17px, 4.8vw, 22px); letter-spacing: 0.14em; color: #fff4ef; background: linear-gradient(180deg, #a02b43 0%, #7e1c30 100%); box-shadow: 0 18px 38px rgba(126, 28, 48, 0.42); animation: breathe 2.4s ease-in-out infinite; transition: background 300ms ease;" style-hover="background: linear-gradient(180deg, #8c2038, #641423);">按这里 · 下一页 →</div>
             <div style="font-size: 13px; letter-spacing: 0.14em; color: #a9737c; text-align: center;">拜托你，一定要按下去看完</div>
           </div>
         </div>
@@ -2164,13 +2164,13 @@
     <span>{{ musicLabel }}</span>
   </div>
 
-  <div onClick="{{ showInvite }}" style="position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 40; display: flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 999px; cursor: pointer; background: rgba(45, 15, 25, 0.92); border: 1px solid rgba(247, 215, 210, 0.35); box-shadow: 0 16px 34px rgba(10, 3, 7, 0.5); color: #ffeae4; font-size: 15px; letter-spacing: 0.08em; white-space: nowrap; max-width: 92vw; backdrop-filter: blur(6px); animation: nudge 2.2s ease-in-out infinite; transition: opacity 500ms ease; opacity: {{ hintOpacity }}; pointer-events: {{ hintPointer }};">
+  <div onClick="{{ showInvite }}" style="position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 40; display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 999px; cursor: pointer; background: rgba(45, 15, 25, 0.92); border: 1px solid rgba(247, 215, 210, 0.35); box-shadow: 0 16px 34px rgba(10, 3, 7, 0.5); color: #ffeae4; font-size: clamp(13px, 3.7vw, 15px); letter-spacing: 0.08em; white-space: nowrap; max-width: 92vw; backdrop-filter: blur(6px); animation: nudge 2.2s ease-in-out infinite; transition: opacity 500ms ease; opacity: {{ hintOpacity }}; pointer-events: {{ hintPointer }};">
     <span>下面还有一件事 · 快按「下一页」→</span>
   </div>
 
-  <div onClick="{{ toGift }}" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding: 8vh 30px; cursor: pointer; transition: opacity 800ms ease 200ms; opacity: {{ teaseOpacity }}; pointer-events: {{ teasePointer }};">
+  <div onClick="{{ toGift }}" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding: 6vh clamp(16px, 5vw, 30px); cursor: pointer; transition: opacity 800ms ease 200ms; opacity: {{ teaseOpacity }}; pointer-events: {{ teasePointer }};">
     <div style="font-size: 11px; letter-spacing: 0.44em; color: #b98a8c;">还 有 一 件 事</div>
-    <div style="font-family: 'LXGW WenKai TC', serif; font-size: 42px; line-height: 1.55; letter-spacing: 0.05em; text-align: center; color: #f9dcd6; max-width: 15em;">有一件事，<br />我一直没跟你说。</div>
+    <div style="font-family: 'LXGW WenKai TC', serif; font-size: clamp(28px, 8vw, 42px); line-height: 1.55; letter-spacing: 0.05em; text-align: center; color: #f9dcd6; max-width: 15em;">有一件事，<br />我一直没跟你说。</div>
     <div style="width: 40px; height: 1px; background: rgba(240, 201, 196, 0.5);"></div>
     <div style="display: flex; align-items: center; gap: 12px; animation: glimmer 3s ease-in-out infinite;">
       <span style="width: 22px; height: 1px; background: #d8a6a0;"></span>
@@ -2179,7 +2179,7 @@
     </div>
   </div>
 
-  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 8vh 30px; transition: opacity 700ms ease 150ms; opacity: {{ giftOpacity }}; pointer-events: {{ giftPointer }};">
+  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 6vh clamp(16px, 5vw, 30px); transition: opacity 700ms ease 150ms; opacity: {{ giftOpacity }}; pointer-events: {{ giftPointer }};">
 
     <div onClick="{{ openGift }}" style="position: relative; width: 200px; height: 176px; cursor: {{ giftCursor }};">
       <div style="position: absolute; left: 50%; bottom: 4px; width: 210px; height: 26px; margin-left: -105px; border-radius: 50%; background: radial-gradient(50% 50% at 50% 50%, rgba(255, 205, 190, 0.28), rgba(0,0,0,0) 70%); transition: opacity 900ms ease; opacity: {{ giftGlow }};"></div>
@@ -2209,14 +2209,14 @@
       <sc-if value="{{ giftOpened }}" hint-placeholder-val="{{ false }}">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; animation: fadeup 900ms ease both;">
           <div style="font-size: 11px; letter-spacing: 0.42em; color: #b98a8c;">其 实</div>
-          <div style="font-family: 'LXGW WenKai TC', serif; font-size: 38px; line-height: 1.5; letter-spacing: 0.05em; color: #f9dcd6;">我在离你{{ distanceText }}的地方</div>
+          <div style="font-family: 'LXGW WenKai TC', serif; font-size: clamp(25px, 7.4vw, 38px); line-height: 1.5; letter-spacing: 0.05em; color: #f9dcd6;">我在离你{{ distanceText }}的地方</div>
           <div onClick="{{ toMap }}" style="padding: 12px 32px; border-radius: 999px; cursor: pointer; font-size: 13px; letter-spacing: 0.22em; color: #2c1220; background: linear-gradient(180deg, #f7dcd5, #e7b6b0); box-shadow: 0 14px 30px rgba(0,0,0,0.35); transition: transform 300ms ease;" style-hover="transform: translateY(-2px);">在哪里？</div>
         </div>
       </sc-if>
     </div>
   </div>
 
-  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 8vh 30px; transition: opacity 700ms ease 150ms; opacity: {{ mapOpacity }}; pointer-events: {{ mapPointer }};">
+  <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 6vh clamp(16px, 5vw, 30px); transition: opacity 700ms ease 150ms; opacity: {{ mapOpacity }}; pointer-events: {{ mapPointer }};">
     <sc-if value="{{ mapActive }}" hint-placeholder-val="{{ true }}">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
         <div style="position: relative; width: 320px; height: 260px; max-width: 84vw;">
@@ -2248,30 +2248,30 @@
     </sc-if>
   </div>
 
-  <div style="position: absolute; inset: 0; display: flex; align-items: flex-start; justify-content: center; padding: 8vh 24px 12vh; overflow-y: auto; transition: opacity 700ms ease 200ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 200ms; opacity: {{ inviteOpacity }}; transform: translateY({{ inviteY }}) scale({{ inviteScale }}); pointer-events: {{ invitePointer }};">
+  <div style="position: absolute; inset: 0; display: flex; align-items: flex-start; justify-content: center; padding: 6vh clamp(14px, 4vw, 24px) 16vh; overflow-y: auto; -webkit-overflow-scrolling: touch; transition: opacity 700ms ease 200ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 200ms; opacity: {{ inviteOpacity }}; transform: translateY({{ inviteY }}) scale({{ inviteScale }}); pointer-events: {{ invitePointer }};">
 
     <div style="width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 44px; color: #f6e7e2;">
 
       <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
         <div style="font-size: 11px; letter-spacing: 0.44em; color: #b98a8c;">最 后 一 页</div>
-        <div style="font-family: 'LXGW WenKai TC', serif; font-size: 42px; line-height: 1.5; letter-spacing: 0.05em; color: #f9dcd6; max-width: 14em;">如果你哪天想见我，<br />我就在这里。</div>
+        <div style="font-family: 'LXGW WenKai TC', serif; font-size: clamp(28px, 7.8vw, 42px); line-height: 1.5; letter-spacing: 0.05em; color: #f9dcd6; max-width: 14em;">如果你哪天想见我，<br />我就在这里。</div>
         <div style="width: 40px; height: 1px; background: rgba(240, 201, 196, 0.5);"></div>
         <div style="font-size: 15px; line-height: 2; font-weight: 300; color: #dab6b4;">不用回覆，也不用特别安排。<br />你想来的时候，我都在。</div>
       </div>
 
       <div style="display: flex; flex-direction: column;">
-        <div style="display: grid; grid-template-columns: 72px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18);">
+        <div style="display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18);">
           <div style="font-size: 11px; letter-spacing: 0.3em; color: #a67b7f; padding-top: 5px;">地 址</div>
           <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
             <div style="font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; font-size: 15px; line-height: 1.65; letter-spacing: 0.02em; color: #d5b0af;">Cube 8teens by Nest Home<br /><span style="font-size: 13px; color: #b98a8c;">Taman Jaya Putra, 81100 Johor Bahru, Malaysia</span></div>
             <div onClick="{{ copyAddress }}" style="display: flex; align-items: center; gap: 8px; padding: 7px 16px; border: 1px solid rgba(240, 201, 196, 0.3); border-radius: 999px; cursor: pointer; font-size: 12px; letter-spacing: 0.16em; color: #e2bdb9; transition: background 300ms ease, color 300ms ease;" style-hover="background: rgba(240, 201, 196, 0.12); color: #fff4ef;">{{ copyLabel }}</div>
           </div>
         </div>
-        <div style="display: grid; grid-template-columns: 72px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18);">
+        <div style="display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18);">
           <div style="font-size: 11px; letter-spacing: 0.3em; color: #a67b7f; padding-top: 3px;">时 间</div>
           <div style="font-size: 15px; color: #d5b0af;">我到 20 号才回</div>
         </div>
-        <div style="display: grid; grid-template-columns: 72px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18); border-bottom: 1px solid rgba(240, 201, 196, 0.18);">
+        <div style="display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(240, 201, 196, 0.18); border-bottom: 1px solid rgba(240, 201, 196, 0.18);">
           <div style="font-size: 11px; letter-spacing: 0.3em; color: #a67b7f; padding-top: 4px;">电 话</div>
           <div style="font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0.08em; color: #d5b0af;">+60 12 965 3996</div>
         </div>
